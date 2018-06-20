@@ -14,7 +14,9 @@ class CreateEmpQualsTable extends Migration
     public function up()
     {
         Schema::create('emp_quals', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('qid');
+            $table->integer('eid');
+            $table->double('marks', 10, 2);
             $table->timestamps();
         });
     }
